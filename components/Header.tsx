@@ -56,7 +56,10 @@ const Container = styled.div`
         box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.12);
       }
     }
-    .modal-wrapper {
+    
+  }
+
+  .modal-wrapper {
         width: 100%;
         height: 100%;
         display: flex;
@@ -79,7 +82,6 @@ const Container = styled.div`
             z-index: 11;
         }
     }
-  }
 
 `
 
@@ -95,16 +97,16 @@ const Header = () => {
                 </div>
             </Link>
             <div className='header-auth-buttons'>
-                <button type="button" className='header-sign-up-buttons' onClick={openModal}>
+                <button type="button" className='header-sign-up-button' onClick={openModal}>
                     회원가입
                 </button>
                 <button type="button" className='header-login-button'>
                     로그인
                 </button>
-                <ModalPortal>
-                    <SignUpModal />
-                </ModalPortal>
             </div>
+            <ModalPortal>
+                <SignUpModal />
+            </ModalPortal>
         </Container>
     );
 };
